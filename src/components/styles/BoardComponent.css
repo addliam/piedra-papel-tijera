@@ -1,0 +1,214 @@
+:root{
+    --red:#D61C4E;
+    --dark-purple:#411530;
+    --blue:#293462;
+    --medium-yellow:#FEB139;
+    --yellow:#FFF80A;
+    --white:#ffffff;
+    --light-white:#EFEFEF;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+div.score-table{
+    display: flex;
+    gap: 3rem;
+    width: 20em;
+    margin-inline: auto;
+}
+div.options-container{
+    display: flex;
+    gap: .1em;
+}
+div.option-clickable:hover{
+    cursor: pointer;
+}
+.board-header{
+    box-sizing: border-box;
+    padding-top: 1rem;
+    text-align: center;
+    height: 15vh;
+    background-color: var(--medium-yellow);
+}
+div.board-header span{
+    font-size: 1.3em;
+}
+#app-title{
+    margin-bottom: .5rem;
+    font-size: 1.85rem;
+    color: var(--white);
+    margin-top: 0;
+}
+a#salon-fama{
+    text-decoration: none;
+    position: absolute;
+    color: var(--blue);
+    font-weight: 700;
+    left: 5em;
+}
+a#salon-fama:hover{
+    color: #354480;
+}
+div.game-container{
+    display: flex;
+}
+div.human-side{
+    width: 50%;
+    border: 1px solid black;
+    background-color: var(--blue);
+}
+div.computer-side{
+    width: 50%;
+    height: 85vh;
+    background-color: var(--red);
+}
+div.human-options-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+    width: fit-content;
+    margin-top: 3.5em;
+    gap: 3em;
+}
+div.computer-options-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5em;
+    margin-top: 3.5em;
+    gap: 3em;
+}
+div.winner-container{
+    display: flex;
+    /* justify-content: flex-start; */
+    padding: 0 .7em;
+    align-items: center;
+    height: 2.4em;
+    min-width: 19em;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5%;
+    left: 38%;
+}
+span#actual-winner-text{
+    width: 7em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 105%;
+    color: #3CCF4E;
+}
+span#actual-winner-label{
+    text-align: left;
+}
+div.human-side>#selected-option{
+    position: absolute;
+    left: 20em;
+    bottom: 25%;
+}
+div.computer-side>#selected-option{
+    position: absolute;
+    right: 20em;
+    bottom: 25%;
+}
+div.players-label{
+    position: absolute;
+    color: white;
+}
+div.players-label#humano{
+    color: var(--light-white);
+    font-size: 2.6em;
+    left: 15rem;
+}
+div.players-label h3{
+    margin: 0;
+}
+div.players-label#versus{
+    color: var(--white);
+    font-size: 6em;
+    left: 44.3%;
+}
+div.players-label#computadora{
+    font-size: 2.6em;
+    color: var(--light-white);
+    right: 8rem;
+}
+div.overlay{
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.706);
+}
+div.game-over-container{
+    color: var(--light-white);
+    z-index: 4;
+    position: absolute;
+    top: 14rem;
+    left: 28rem;
+    padding: 1em;
+    width: 30%;
+    height: auto;
+    background-color: var(--dark-purple);
+    border-radius: 8px;
+}
+div#save-progress-form{
+    width: 90%;
+    margin-inline:auto;
+}
+div.game-over-container h3{
+    text-align: center;
+}
+div.game-over-container label{
+    margin-right: 2em;
+}
+div.game-over-container input{
+    padding: 0 .5em;
+    border-radius: 4px;
+    font-size: 1em;
+    height: 1.6em;
+    border: none;
+}
+div.game-over-container input:focus{
+    outline: 4px solid var(--blue);
+}
+div#save-button{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .4em;
+}
+button#skip-close{
+    background-color: #ffffff00;
+    border: 1px solid white;
+    margin-right: 1.2em;
+}
+button#skip-close:hover{
+    cursor: pointer;
+    background-color: #d61c4e31;
+}
+div.game-over-container button{
+    display: inline-block;
+    color: white;
+    border: none;
+    height: 2em;
+    letter-spacing: .8px;
+    width: 7em;
+    font-size: .8em;
+    background-color: var(--red);
+    border-radius: 5px;
+}
+div.game-over-container button:hover{
+    cursor: pointer;
+    background-color: #c21b47;
+}
+div#separation{
+    height: .8em;
+    width: 100%;
+}
+span#score-text{
+    display: inline-block;
+    width: 10em;
+    text-align: center;
+}
